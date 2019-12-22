@@ -1,4 +1,41 @@
-<h1>Hello {{usrName}} ,Age: {{userAge}}</h1>
-<!-- {{}} angualar expression -->
-<button (click)="myfunc()">Enter</button>
-<!-- (click) event binding -->
+<!-- interpolation -->
+<h1>{{user}} - {{subject}}</h1>
+<button (click) = "myfunc()">Enter</button>
+
+<!-- *ngif structural directive -->
+<p *ngIf = "myvar">   <!-- // if it is false then it will hide from webpage as well as from console -->
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Aliquid reiciendis excepturi minima, facilis inventore, 
+    nihil amet, distinctio repellat sit ab modi fuga cum 
+    quisquam omnis similique ipsa eveniet iusto optio!
+</p>
+
+<!-- directive as a property --> 
+<p [hidden] = "myvar1">   <!-- // if it is true then it will hide from webpage but not from console -->
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Aliquid reiciendis excepturi minima, facilis inventore, 
+    nihil amet, distinctio repellat sit ab modi fuga cum 
+    quisquam omnis similique ipsa eveniet iusto optio!
+</p>
+
+<!-- one way binding -->
+    <!-- experssion binding -->
+    <input type="text" value="{{user}}">
+
+    <!-- property binding -->
+    <input type="text" [value]="user">
+
+    <!-- style binding -->
+    <p [style.background] = "mycolor">Hello</p>
+
+    <!-- class binding -->
+    <p [class.myclass] = "status_class">Hello</p>
+
+    <!-- reference variable -->
+    <input type="text" #data1>
+    <button (click)="getval(data1)">Enter</button>
+   
+
+
+    
+

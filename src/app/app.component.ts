@@ -6,10 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  userName = "Urja";
-  userAge = 20;
+  //properties
+  user = "Urja";
+  subject = "english";
+  myvar = true   //enabled
+  myvar1 = false  //enabled
+  mycolor = "#ccc";
+  status_class = false;
 
+  //methods
   myfunc(){
-    alert();
+    //alert();
+    this.user = "aditi";
+    this.subject = "maths";
+    this.myvar = false // hides from webpage and from console
+    this.myvar1 = true // hides from webpage not from console
+    this.status_class = true;
+  }
+
+  getval(rec){
+    console.log("test")
+    console.log(rec)
+    console.log(rec.value)
+
   }
 }
